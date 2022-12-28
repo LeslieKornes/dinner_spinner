@@ -1,0 +1,12 @@
+<% @meals.each do |m| %>
+  <section class="meal">
+    <div class="summary">
+      <h2>
+        <%= m.name %>
+      </h2>
+      <p>
+        <%= truncate(m.description, length: 150, separator: ' ') %>
+      </p>
+    </div>
+  </section>
+<% end %>
