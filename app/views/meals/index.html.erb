@@ -2,7 +2,7 @@
   <section class="meal">
     <div class="summary">
       <h2>
-        <%= m.name %>
+        <%= link_to m.name, m %>
       </h2>
       <p>
         <%= truncate(m.description, length: 150, separator: ' ') %>
