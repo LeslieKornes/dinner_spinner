@@ -1,0 +1,41 @@
+// Colors
+
+$black: #393939;
+$off-white: #ededed;
+$dark-gray: #666;
+$medium-gray: #6c757d;
+$light-gray: #c2c2c2;
+$blue: #237cbe;
+$light-blue: lighten($blue, 40%);
+$orange: #e8890c;
+$yellow: #ffc107;
+$light-yellow: #ffc;
+$red: #dc3545;
+
+// Import Bootstrap Styles
+
+@import "bootstrap";
+
+// Meals Index Page
+
+section.meal {
+  // @extend .row;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1em;
+  border-bottom: 1px dotted $border-color;
+
+  &:nth-last-child(1) {
+    border-bottom: none;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+    margin-bottom: 0.25rem;
+    margin-left: 0.5rem;
+  }
+
+  p {
+    margin-top: 1.1rem;
+    margin-left: 0.75rem;
+  }
+}
