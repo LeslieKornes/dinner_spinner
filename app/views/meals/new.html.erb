@@ -1,0 +1,14 @@
+<%= form_with model: @meal do |meal_form| %>
+  <%# TODO: add form error partial %>
+
+  <%= meal_form.label :name %>
+  <%= meal_form.text_field :name %>
+
+  <%= meal_form.label :description %>
+  <%= meal_form.text_area :description, rows: 5 %>
+
+  <%= meal_form.label :url %>
+  <%= meal_form.text_area :url %>
+
+  <%= meal_form.submit %>
+<% end %>
