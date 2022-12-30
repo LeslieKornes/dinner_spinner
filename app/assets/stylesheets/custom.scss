@@ -12,6 +12,10 @@ $yellow: #ffc107;
 $light-yellow: #ffc;
 $red: #dc3545;
 
+// Custom Variables
+
+$secondary-text-color: $medium-gray;
+
 // Import Bootstrap Styles
 
 @import "bootstrap";
@@ -37,6 +41,59 @@ section.meal {
   p {
     margin-top: 1.1rem;
     margin-left: 0.75rem;
+  }
+}
+
+// Meals Show Page
+
+section.meal-details {
+  @extend .row;
+
+  .image {
+    @extend .col-md-3, .text-left !optional;
+
+    input[type="submit"] {
+      margin-top: 1rem;
+    }
+  }
+
+  .details {
+    @extend .col-md-7, .text-left;
+  }
+
+  aside {
+    @extend .col-md-2;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.35rem;
+    color: $secondary-text-color;
+  }
+
+  h3 {
+    margin-top: 1.5rem;
+    font-size: 1.25rem;
+    color: $secondary-text-color;
+    font-weight: 300;
+  }
+
+  table {
+    td {
+      padding-top: 0.35rem;
+      padding-bottom: 0.35rem;
+    }
+    th {
+      padding-right: 1rem;
+    }
+  }
+
+  p {
+    margin-top: 1rem;
+    font-size: 1.15em;
   }
 }
 
@@ -66,12 +123,6 @@ form:not([class="button_to"]) {
   max-width: 400px;
   margin-left: 1.5rem;
   margin-top: 1.5rem;
-
-  // label {
-  //   font-size: 1.1rem;
-  //   font-weight: 600;
-  //   display: block;
-  // }
 
   input:not([type="checkbox"]):not([type="radio"]):not([type="file"]):not([type="submit"]),
   textarea,

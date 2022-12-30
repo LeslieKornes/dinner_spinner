@@ -2,11 +2,8 @@
   <section class="meal">
     <div>
       <h2>
-        <%= link_to m.name, m %>
+        <%= link_to m.name.capitalize, m %>
       </h2>
-      <p>
-        <%= truncate(m.description, length: 150, separator: ' ') %>
-      </p>
     </div>
   </section>
 <% end %>
