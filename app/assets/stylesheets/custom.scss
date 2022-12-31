@@ -138,3 +138,18 @@ form:not([class="button_to"]) {
     margin-top: 1.5rem;
   }
 }
+
+// Flashes
+
+.flash {
+  @extend .alert;
+  text-align: center;
+
+  &.notice {
+    @extend .alert-success;
+  }
+
+  &.alert {
+    @extend .alert-danger;
+  }
+}
