@@ -100,21 +100,22 @@ section.admin {
   }
 }
 
-// Forms
+// // Forms
 
 form:not([class="button_to"]) {
-  max-width: 400px;
+  // max-width: 400px;
   margin-left: 1.5rem;
+  margin-right: 1.5rem;
   margin-top: 1.5rem;
 
-  input:not([type="checkbox"]):not([type="radio"]):not([type="file"]):not([type="submit"]),
-  textarea,
-  select:not(.date) {
-    @extend .form-control;
-    margin-bottom: 0.75rem;
-    width: 100%;
-    height: 100%;
-  }
+//   input:not([type="checkbox"]):not([type="radio"]):not([type="file"]):not([type="submit"]),
+//   textarea,
+//   select:not(.date) {
+//     @extend .form-control;
+//     margin-bottom: 0.75rem;
+//     width: 100%;
+//     height: 100%;
+//   }
 
   input[type="submit"] {
     @extend .btn, .btn-primary;

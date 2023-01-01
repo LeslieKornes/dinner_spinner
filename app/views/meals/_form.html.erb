@@ -1,14 +1,6 @@
-<%= form_with model: meal do |meal_form| %>
-  <%= render 'shared/errors', object: meal %>
-
-  <%= meal_form.label :name %>
-  <%= meal_form.text_field :name %>
-
-  <%= meal_form.label :description %>
-  <%= meal_form.text_area :description, rows: 5 %>
-
-  <%= meal_form.label :link %>
-  <%= meal_form.text_area :link %>
-
-  <%= meal_form.submit %>
+<%= bootstrap_form_with(model: @meal, local: true) do |m| %>
+  <%= m.text_field :name, required: true %>
+  <%= m.text_area :description, rows: 5, required: true %>
+  <%= m.text_area :link %>
+  <%= m.submit %>
 <% end %>

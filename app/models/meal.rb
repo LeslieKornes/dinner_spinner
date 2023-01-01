@@ -13,5 +13,6 @@ class Meal < ApplicationRecord
 
   validates_presence_of :name, :description
   validates :name, uniqueness: true
+  validates :description, length: { minimum: 25, message: "Please provide a longer description!" }
 
 end
