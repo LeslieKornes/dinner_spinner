@@ -15,34 +15,17 @@ $red: #dc3545;
 // Custom Variables
 
 $secondary-text-color: $medium-gray;
+$accent-color: $orange;
+$secondary-link-color: $light-blue;
+$border-color: $light-gray;
+$error-color: $red;
+$error-background-color: $light-yellow;
+$sold-out-color: $yellow;
+$box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.09);
 
 // Import Bootstrap Styles
 
 @import "bootstrap";
-
-// Meals Index Page
-
-section.meal {
-  // @extend .row;
-  margin-bottom: 1.5rem;
-  padding-bottom: 1em;
-  border-bottom: 1px dotted $border-color;
-
-  &:nth-last-child(1) {
-    border-bottom: none;
-  }
-
-  h2 {
-    font-size: 1.5rem;
-    margin-bottom: 0.25rem;
-    margin-left: 0.5rem;
-  }
-
-  p {
-    margin-top: 1.1rem;
-    margin-left: 0.75rem;
-  }
-}
 
 // Meals Show Page
 
@@ -151,5 +134,26 @@ form:not([class="button_to"]) {
 
   &.alert {
     @extend .alert-danger;
+  }
+}
+
+ 
+// Errors
+
+section.errors {
+  margin: 1rem 0;
+  padding: 1.5rem;
+  border-radius: 0.3rem;
+  background: $error-background-color;
+
+  h2 {
+    color: $error-color;
+    font-size: 1.25rem;
+  }
+
+  h3 {
+    font-size: 1rem;
+    margin-top: 1rem;
+    font-weight: 600;
   }
 }
