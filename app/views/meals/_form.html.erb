@@ -1,0 +1,6 @@
+<%= bootstrap_form_with(model: @meal, local: true) do |m| %>
+  <%= m.text_field :name, required: true %>
+  <%= m.text_area :description, rows: 5, required: true %>
+  <%= m.text_area :link %>
+  <%= m.submit %>
+<% end %>

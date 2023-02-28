@@ -4,6 +4,20 @@
     <p>
       <%= @meal.description %>
     </p>
+
+    <p>
+      <%= @meal.link %>
+    </p>
   </div>
 </section>
+
+<section class="admin">
+  <%= link_to "Edit Meal", edit_meal_path, class:"button" %>
+  <%# look: now turbo_method: :delete (Rails 7)  %>
+  <%= link_to "Delete Meal", @meal,  class: "button", data: {
+                    turbo_method: :delete,
+                    turbo_confirm: "Are you sure?"
+                  } %>
+</section>
+
 

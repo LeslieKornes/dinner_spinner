@@ -12,30 +12,149 @@ $yellow: #ffc107;
 $light-yellow: #ffc;
 $red: #dc3545;
 
+// Custom Variables
+
+$secondary-text-color: $medium-gray;
+$accent-color: $orange;
+$secondary-link-color: $light-blue;
+$border-color: $light-gray;
+$error-color: $red;
+$error-background-color: $light-yellow;
+$sold-out-color: $yellow;
+$box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.09);
+
 // Import Bootstrap Styles
 
 @import "bootstrap";
 
-// Meals Index Page
+// Meals Show Page
 
-section.meal {
-  // @extend .row;
-  margin-bottom: 1.5rem;
-  padding-bottom: 1em;
-  border-bottom: 1px dotted $border-color;
+section.meal-details {
+  @extend .row;
 
-  &:nth-last-child(1) {
-    border-bottom: none;
+  .image {
+    @extend .col-md-3, .text-left !optional;
+
+    input[type="submit"] {
+      margin-top: 1rem;
+    }
+  }
+
+  .details {
+    @extend .col-md-7, .text-left;
+  }
+
+  aside {
+    @extend .col-md-2;
+  }
+
+  h1 {
+    font-size: 2rem;
   }
 
   h2 {
-    font-size: 1.5rem;
-    margin-bottom: 0.25rem;
-    margin-left: 0.5rem;
+    font-size: 1.35rem;
+    color: $secondary-text-color;
+  }
+
+  h3 {
+    margin-top: 1.5rem;
+    font-size: 1.25rem;
+    color: $secondary-text-color;
+    font-weight: 300;
+  }
+
+  table {
+    td {
+      padding-top: 0.35rem;
+      padding-bottom: 0.35rem;
+    }
+    th {
+      padding-right: 1rem;
+    }
   }
 
   p {
-    margin-top: 1.1rem;
-    margin-left: 0.75rem;
+    margin-top: 1rem;
+    font-size: 1.15em;
+  }
+}
+
+// Admin Section
+
+section.admin {
+  text-align: center;
+  margin: 3rem 0;
+  padding-top: 2rem;
+  border-top: 1px dashed $border-color;
+
+  &.no-rule {
+    border-top: none;
+    padding-top: 0;
+  }
+
+  a.button {
+    @extend .btn, .btn-primary;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+}
+
+// // Forms
+
+form:not([class="button_to"]) {
+  // max-width: 400px;
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+  margin-top: 1.5rem;
+
+//   input:not([type="checkbox"]):not([type="radio"]):not([type="file"]):not([type="submit"]),
+//   textarea,
+//   select:not(.date) {
+//     @extend .form-control;
+//     margin-bottom: 0.75rem;
+//     width: 100%;
+//     height: 100%;
+//   }
+
+  input[type="submit"] {
+    @extend .btn, .btn-primary;
+    margin-top: 1.5rem;
+  }
+}
+
+// Flashes
+
+.flash {
+  @extend .alert;
+  text-align: center;
+
+  &.notice {
+    @extend .alert-success;
+  }
+
+  &.alert {
+    @extend .alert-danger;
+  }
+}
+
+ 
+// Errors
+
+section.errors {
+  margin: 1rem 0;
+  padding: 1.5rem;
+  border-radius: 0.3rem;
+  background: $error-background-color;
+
+  h2 {
+    color: $error-color;
+    font-size: 1.25rem;
+  }
+
+  h3 {
+    font-size: 1rem;
+    margin-top: 1rem;
+    font-weight: 600;
   }
 }

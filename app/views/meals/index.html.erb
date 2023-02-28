@@ -1,12 +1,25 @@
-<% @meals.each do |m| %>
-  <section class="meal">
-    <div>
-      <h2>
-        <%= link_to m.name, m %>
-      </h2>
-      <p>
-        <%= truncate(m.description, length: 150, separator: ' ') %>
-      </p>
+<div class="album py-5 bg-light">
+  <div class="container">
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+      <% @meals.each do |m| %>
+        <div class="col">
+          <div class="card shadow-sm">
+            <div class="card-body">
+                <p class="card-text" style="text-align: center;"><%= link_to m.name.capitalize, m %></p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group w-100">
+                    <%= link_to "View", m, class: "btn btn-outline-secondary" %>
+                    <%= link_to "Edit", edit_meal_path(m), class: "btn btn-outline-secondary" %>
+                  </div>
+                </div>
+            </div>
+          </div>
+        </div>
+      <% end %>
     </div>
-  </section>
-<% end %>
+  </div>
+</div>
+
+<section class="admin">
+  <%= link_to "Add New Meal", new_meal_path, class:"button" %>
+</section>

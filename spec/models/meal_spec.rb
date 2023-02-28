@@ -30,5 +30,11 @@ RSpec.describe Meal, type: :model do
       expect(meal).not_to be_valid
       expect(meal.errors[:description]).to include("can't be blank")
     end
+
+    it 'has a required description length of 25 chars' do 
+      meal.description = 'a few chars'
+      expect(meal).not_to be_valid
+      expect(meal.errors[:description]).to include("Please provide a longer description!")
+    end
   end
 end

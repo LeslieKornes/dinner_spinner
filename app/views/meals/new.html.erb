@@ -1,0 +1,5 @@
+<h1>Create a New Meal</h1>
+
+<%= turbo_frame_tag "meal" do %>
+  <%= render 'form', meal: @meal %>
+<% end %>

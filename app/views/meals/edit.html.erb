@@ -1,0 +1,9 @@
+<h1>Editing Meal: <%= @meal.name %></h1>
+
+<%# look: form submission didn't work with addition of form partial %>
+<%# without the turbo_frame_tag. need to read up on this %>
+<%# https://github.com/hotwired/turbo-rails/issues/12 %>
+
+<%= turbo_frame_tag "meal" do %>
+  <%= render 'form', meal: @meal %>
+<% end %>
